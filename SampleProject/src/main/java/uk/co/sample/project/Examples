@@ -1,0 +1,20 @@
+List<Person> persons = Arrays.asList(new Person("Joe", 23), new Person("Jim", 21), new Person("John", 17));
+		
+		/** Java 7 **/
+		for (Person person : persons) {
+			person.setLastName("Smith");
+		}
+
+		/** Java 8 For Each **/
+		persons.stream().forEach(p -> p.setLastName("Smith"));
+		
+		/** Java 8 Filter and Collect results back in an Array List rather than a Stream **/
+		List<Person> personsOver18 = persons.stream()
+											.filter(p -> p.getAge() > 18)
+											.collect(Collectors.toCollection(ArrayList::new));
+	
+		/** Java 8 Map **/
+		List<Student> students = persons.stream()
+											.filter(p -> p.getAge() > 18)
+											.map(Student::new)
+											.collect(Collectors.toList());
