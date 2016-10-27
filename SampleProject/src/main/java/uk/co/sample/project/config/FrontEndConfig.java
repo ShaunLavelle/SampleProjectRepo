@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
@@ -66,9 +67,14 @@ public class FrontEndConfig extends WebMvcConfigurerAdapter {
 		freeMarkerViewResolver.setSuffix(".ftl");
 		return freeMarkerViewResolver;
 	}
-	
+
 	private String getApplicationVersion() {
-	    String version = SampleProjectApplication.class.getPackage().getImplementationVersion();
-	    return version == null ? "Development" : version;
-	  }
+		String version = SampleProjectApplication.class.getPackage().getImplementationVersion();
+		return version == null ? "Development" : version;
+	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+	}
 }
