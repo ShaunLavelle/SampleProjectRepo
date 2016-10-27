@@ -2,30 +2,15 @@ package uk.co.sample.project.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "APP_USER")
-public class User {
+public class User extends GenericDomain {
 
-	private Long mPk;
 	private String firstName;
 	private String lastName;
 	private Long age;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "PK", nullable = false)
-	public Long getPk() {
-		return mPk;
-	}
-
-	public void setPk(Long aPk) {
-		this.mPk = aPk;
-	}
 
 	@Column(name = "FIRST_NAME", nullable = false)
 	public String getFirstName() {
