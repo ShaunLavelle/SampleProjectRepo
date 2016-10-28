@@ -24,7 +24,6 @@
 <!-- /.website title -->
 <title>Sample Project</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
 </head>
   
 <body data-spy="scroll" data-target="#navbar-scroll">
@@ -67,28 +66,6 @@
 
 				</div> 
 				
-				<!-- /.signup form -->
-				<div class="col-md-5">
-				
-					<div class="signup-header wow fadeInUp">
-						<h3 class="form-title text-center">SIGN UP</h3>
-						<form class="form-header" action="#" role="form" method="POST" id="#">
-						<input type="hidden" name="u" value="503bdae81fde8612ff4944435">
-						<input type="hidden" name="id" value="bfdba52708">
-							<div class="form-group">
-								<input class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Your name" required>
-							</div>
-							<div class="form-group">
-								<input class="form-control input-lg" name="MERGE0" id="email" type="email" placeholder="Email address" required>
-							</div>
-							<div class="form-group last">
-								<input type="submit" class=";btn btn-warning btn-block btn-lg" value="SIGN UP">
-							</div>
-							<p class="privacy text-center">We will not share your email. Read our <a href="privacy.html">privacy policy</a>.</p>
-						</form>
-					</div>				
-				
-				</div>
 			</div>
 		</div> 
 	</div> 
