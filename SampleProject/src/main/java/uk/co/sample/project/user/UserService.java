@@ -262,7 +262,7 @@ public class UserService implements UserDetailsService {
   }
 
   public Integer incrementFailedLoginAttempts(String username) {
-    return transactionTemplate.execute(status -> {
+     return transactionTemplate.execute(status -> {
       User user = userDao.getUserByUsername(username);
       user.setConsecutiveFailedLogin(user.getConsecutiveFailedLogin() + 1);
       userDao.saveOrUpdate(user);

@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="us">
 <head>
+<link rel="shortcut icon" href="${context_path}/static/images/favicon.ico">
 <!--Jquery UI-->
 <link rel="stylesheet"
 	href="${context_path}/static/js/vendor/jquery-ui/jquery-ui.css">
+<link rel="stylesheet"
+	href="${context_path}/static/css/home.css">
 <!--JQuery-->
 <script type="text/javascript"
 	src="${context_path}/static/js/vendor/jquery-1.11.0.min.js"></script>
@@ -41,42 +44,25 @@
 </style>
 </head>
 
-<body data-spy="scroll" data-target="#navbar-scroll">
+<body data-spy="scroll" data-target="#navbar-scroll"  class="fullscreen landing parallax"
+		style="background-image: url('${context_path}/static/images/coast.jpg');"
+		data-img-width="2000" data-img-height="1333" data-diff="100">
 
 	<!-- /.preloader -->
 	<div id="preloader"></div>
 	<div id="top"></div>
 
 	<!-- /.parallax full screen background image -->
-	<div class="fullscreen landing parallax"
-		style="background-image: url('${context_path}/static/images/coast.jpg');"
-		data-img-width="2000" data-img-height="1333" data-diff="100">
-
-		<div class="overlay">
-			<div class="container">
+			<div class="container overlay">
 				<div class="row">
-					<div class="col-md-12">
-
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
 						<!-- /.logo -->
 						<div class="logo wow fadeInDown">
-							<a href=""><h1 style="color: orange">Sample Project</h1></a>
+							<h1 style="color: orange" class="text-center">Sample Project</h1>
 						</div>
 
 						<!-- /.main title -->
-						<h1 class="wow fadeInLeft">Welcome To The Sample Project</h1>
-
-						<!-- /.header paragraph -->
-						<div class="landing-text wow fadeInUp">
-							<p>Sample Project is a modern and customizable landing page
-								template designed to increase conversion of your product. Sample
-								Project is flexible to suit any kind of business.</p>
-						</div>
-
-					</div>
-
-					<!-- /.login form -->
-					<div class="col-md-3"></div>
-					<div class="col-md-6">
 						<div class="signup-header wow fadeInUp">
 							<h3 class="form-title text-center">LOGIN</h3>
 							<form class="form-header" id="loginForm" action="login" method="post" role="form">
@@ -110,11 +96,9 @@
 							</form>
 						</div>
 					</div>
-					<div class="col-md-3"></div>
+					<div class="col-md-4"></div>
 				</div>
 			</div>
-		</div>
-	</div>
 </body>
 <!-- /.javascript files -->
     <script src="${context_path}/static/js/jquery.js"></script>

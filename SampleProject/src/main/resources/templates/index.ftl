@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" href="${context_path}/static/images/favicon.ico">
 <!-- CSS Files -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -35,43 +36,7 @@
 <!-- /.parallax full screen background image -->
 <div class="fullscreen landing parallax" style="background-image:url('images/coast.jpg');" data-img-width="2000" data-img-height="1333" data-diff="100">
 	
-	<div class="overlay">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7">
-				
-					<!-- /.logo -->
-					<div class="logo wow fadeInDown"> <a href=""><h1 style="color: orange">Sample Project</h1></a></div>
-
-					<!-- /.main title -->
-						<h1 class="wow fadeInLeft">
-						Welcome To Sample Landing Page
-						</h1>
-
-					<!-- /.header paragraph -->
-					<div class="landing-text wow fadeInUp">
-						<p>Sample Project is a modern and customizable 
-						landing page template designed to increase 
-						conversion of your product. Sample Project is flexible 
-						to suit any kind of business.</p>
-					</div>				  
-
-					<!-- /.header button -->
-					<div class="head-btn wow fadeInLeft">
-						<a href="${context_path}/login" class="btn-primary">Log In</a>
-						<a href="#contact" class="btn-default">Contact</a>
-					</div>
-	
-		  
-
-				</div> 
-				
-			</div>
-		</div> 
-	</div> 
-</div>
- 
-<!-- NAVIGATION -->
+	<!-- NAVIGATION -->
 <div id="menu">
 	<nav class="navbar-wrapper navbar-default" role="navigation">
 		<div class="container">
@@ -93,12 +58,36 @@
 					<li><a href="#package">Pricing</a></li>
 					<li><a href="#testi">Reviews</a></li>
 					<li><a href="#contact">Contact</a></li>
+					<li><a style="color:red;" href="#logout">Logout</a></li>
 				</ul>
 			  </div>
 		</div>
 	</nav>
 </div>
 
+	<div class="overlay">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<!-- /.logo -->
+					<div class="logo wow fadeInDown text-center"> <a href=""><h1 style="color: orange">Sample Project</h1></a></div>
+
+					<!-- /.header paragraph -->
+					<div class="landing-text wow fadeInUp text-center">
+						<p>Sample Project is a modern and customizable 
+						landing page template designed to increase 
+						conversion of your product. Sample Project is flexible 
+						to suit any kind of business.</p>
+					</div>				  
+
+				</div> 
+				<div class="col-md-2"></div>
+			</div>
+		</div> 
+	</div> 
+</div>
+  
 <!-- /.intro section -->
 <div id="intro">
 	<div class="container">
@@ -106,7 +95,7 @@
 
 		<!-- /.intro image -->
 			<div class="col-md-6 intro-pic wow slideInLeft">
-				<img src="images/intro-image.jpg" alt="image" class="img-responsive">
+				<img src="images/iphone.jpg" alt="image" class="img-responsive">
 			</div>	
 			
 			<!-- /.intro content -->
@@ -222,10 +211,11 @@
 	<div class="contact fullscreen parallax" style="background-image:url('images/coast.jpg');" data-img-width="2000" data-img-height="1334" data-diff="100">
 		<div class="overlay">
 			<div class="container">
-				<div class="row contact-row">
-				
-					<!-- /.address and contact -->
-					<div class="col-sm-5 contact-left wow fadeInUp">
+			
+				<div class="row contact-row" style="margin-bottom:40px;">
+				<!-- /.address and contact -->
+				<div class="col-sm-1"></div>
+					<div class="col-sm-4 contact-left wow fadeInUp">
 						<h2><span class="highlight">Get</span> in touch</h2>
 							<ul class="ul-address">
 							<li><i class="pe-7s-map-marker"></i>1600 Amphitheatre Parkway, Mountain View</br>
@@ -234,14 +224,18 @@
 							<li><i class="pe-7s-phone"></i>+1 (123) 456-7890</br>
 							+2 (123) 456-7890
 							</li>
-							<li><i class="pe-7s-mail"></i><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+							<li><i class="pe-7s-mail"></i><a href="mailto:shaunlavelle@hotmail.co.uk?Subject=Sample%20Project%20Get%20In%20Touch" target="_top">shaunlavelle@hotmail.co.uk</a></li>
 							<li><i class="pe-7s-look"></i><a href="#">www.yoursite.com</a></li>
 							</ul>	
-								
 					</div>
-					
+					<div id="map" style="height:280px;" class="contact-right col-sm-6 wow fadeInUp"></div>
+					<div class="col-sm-1"></div>
+				</div>
+			
+				<div class="row contact-row" style="margin-top:-10px; margin-bottom:40px;">				
 					<!-- /.contact form -->
-					<div class="col-sm-7 contact-right">
+					<div class="col-sm-1"></div>
+					<div class="col-sm-10 contact-right">
 						<form method="POST" id="contact-form" class="form-horizontal" action="contactengine.php" onSubmit="alert('Thank you for your feedback!');">
 							<div class="form-group">
 							<input type="text" name="Name" id="Name" class="form-control wow fadeInUp" placeholder="Name" required/>
@@ -257,6 +251,7 @@
 							</div>
 						</form>		
 					</div>
+					<div class="col-sm-1"></div>
 				</div>
 			</div>
 		</div>
@@ -282,15 +277,31 @@
 	</div>	
 </footer>
 	
-	<!-- /.javascript files -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script>
-		new WOW().init();
-	</script>
-  </body>
+<!-- /.javascript files -->
+   <script src="js/jquery.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="js/jquery.sticky.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+<script>
+	function initMap() {
+        var uluru = {lat: 22.2008237, lng: 114.0975606};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxKq3rihR4Mia-Qldaoh-F1pj3B5A7krY&callback=initMap">
+</script>
+</body>
 </html>

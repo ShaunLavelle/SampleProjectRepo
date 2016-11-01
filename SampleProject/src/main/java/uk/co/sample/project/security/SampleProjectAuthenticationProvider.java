@@ -64,8 +64,8 @@ public class SampleProjectAuthenticationProvider implements AuthenticationProvid
       throw new BadCredentialsException("Password needs to be changed");
     }
     if (!passwordEncoder.matches(password, user.getPassword())) {
-      if (userService.incrementFailedLoginAttempts(username) >= Integer.parseInt(environment.getRequiredProperty(
-        "frontend.security.numberOfConsecutiveFailedLoginAllowed"))) {
+      if (userService.incrementFailedLoginAttempts(username) >= 
+    		  Integer.parseInt(environment.getRequiredProperty("frontend.security.numberOfConsecutiveFailedLoginAllowed"))) {
         userService.setWebUserLocked(username);
         throw new LockedException("Account locked, reached the allowed number of failed login attempts");
       }
