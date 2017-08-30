@@ -15,6 +15,7 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private Long age;
+	private String username;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,8 +27,17 @@ public class User {
 	public void setPk(Long aPk) {
 		this.mPk = aPk;
 	}
+	
+	@Column(name = "USERNAME", nullable = false)
+	public String getUsername() {
+    return username;
+  }
 
-	@Column(name = "FIRST_NAME", nullable = false)
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  @Column(name = "FIRST_NAME", nullable = false)
 	public String getFirstName() {
 		return firstName;
 	}
